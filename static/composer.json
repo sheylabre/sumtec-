@@ -1,0 +1,6 @@
+{
+    "require": {
+        "joshcam/mysqli-database-class": "^2.7",
+        "phpmailer/phpmailer": "^5.2"
+    }
+}
