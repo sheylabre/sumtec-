@@ -7,6 +7,11 @@
 	margin-top: 30px;
 }
 
+.logo-yealink {
+    display: block;
+    margin: 0 auto;
+}
+
 .txt-nuevo-sistema {
 	color: #0d4b8b;
 	font-size: 33px;
@@ -18,24 +23,58 @@
 	font-weight: bold;
 }
 
-.producto {
-    width: 50%;
-    position: relative;
-
+.product {
+    opacity: 1;
+    -webkit-transition: all 0.75s ease-in-out;
+       -moz-transition: all 0.75s ease-in-out;
+        -ms-transition: all 0.75s ease-in-out;
+         -o-transition: all 0.75s ease-in-out;
+            transition: all 0.75s ease-in-out;
 }
 
-.producto1 {
+#producto.start {
+    left: -50%;
+    opacity: 0;
+}
+
+#producto1.start {
+    margin-top: 50%;
+    left: 5%;
+    opacity: 0;
+}
+
+#producto2.start {
+    margin-top: 10%;
+    left: 100%;
+    opacity: 0;
+}
+
+#producto {
+    width: 40%;
+    position: absolute;
+    left: 0px;
+}
+
+#producto1 {
     width: 90%;
     position: absolute;
-    top: 145px;
-    left: 80px;
+    margin-top: 30%;
+    left: 5%;
 }
 
-.producto2 {
-    width: 70%;
+#producto2 {
+    width: 60%;
     position: absolute;
-    left: 42%;
-    top: 10%;
+    margin-top: 10%;
+    left: 40%;
+}
+
+#product-container {
+    /* padding-bottom: 25%;*/
+}
+
+.product {
+
 }
 
 .mg-marco-producto {
@@ -59,15 +98,15 @@
 	margin: 0;
 }
 
-.cudr-azul {
+.blue-banner {
 	background-color: #0d4b8b;
 	color: white;
 	text-align: center;
 	font-size: 18px;
 	padding: 5px;
 	width: 66%;
-	margin-left: 55px;
-	margin-bottom: 50px;
+	display: block;
+    margin: 0 auto 50px;
 }
 
 .desc25 {
@@ -103,18 +142,21 @@
 }
 
 
-.txt-icono {
+.icon-text {
+    display: block;
 	font-size: 12px;
 	color:  #0d4b8b;
 	text-align: center;
 }
 
 .icono-dispo {
-	margin: 0 65px 10px;
+    display: block;
+	margin: 0 auto 10px;
 }
 
 .icono {
-	margin: 0 35px 10px;
+    display: block;
+	margin: 0 auto 10px;
 }
 
 footer {
@@ -130,37 +172,12 @@ Responsive Mobile
 ========================================================================== */
 
 @media screen and (max-width: 1200px) {/*md*/
-
-
     .show-md{display:block !important}
     .hide-md{display:none !important}
 
 }
+
 @media screen and (max-width: 991px) {/*sm*/
-   	.logo-yealink {
-   		margin-left: 25%;
-   	}
-
-   	.producto {
-    width: 60%;
-    position: relative;
-
-	}
-
-	.producto1 {
-	    width: 120%;
-	    position: absolute;
-	    top: 130px;
-	    left: 40px;
-	}
-
-	.producto2 {
-	    width: 80%;
-	    position: absolute;
-	    left: 52%;
-	    top: 15%;
-	}
-
 	.mg-marco-producto {
 		margin-bottom: 5%;
 	}
@@ -182,84 +199,74 @@ Responsive Mobile
     .hide-sm{display:none !important}
 }
 @media screen and (max-width: 767px) {/*xs menu movil*/
-	
-	.producto {
-	    width: 36%;
-	    position: relative;
-	    margin-bottom: 30%;
-	    margin-top: 5%;
-	}
+    .txt-incrementa-reduce {
+        bottom: 138px;
+    }
 
-	.producto1 {
-	    width: 75%;
-	    position: absolute;
-	    top: 180px;
-	    left: 55px;
-	}
+    .txt-incrementa-productividad {
+        font-size: 20px;
+    }
 
-	.producto2 {
-	    width: 50%;
-	    position: absolute;
-	    left: 33%;
-	    top: 15%;
-	}
+    .reduce-costo {
+        font-size: 15px;
+    }
 
 	.mg-marco-producto {
 		margin-bottom: 5%;
+        margin-top: 5%;
 	}
 
 	.desc25 {
 	    position: relative;
-	    bottom: 54px;
-	    left: 5%;
+	    bottom: 18px;
+	    left: 4%;
+        width: 40%;
+
 	}
 
-	.cudr-azul {
+	.blue-banner {
 		width: 75%;
 	}
 
 	.txt-incrementa-reduce {
 	    margin-left: 42%;
 	    position: relative;
-	    bottom: 200px;
+	    bottom: 140px;
 	}
 
 	.marco-desc {
-		height: 215px;
+		height: 145px;
+        margin-top: 75%;
 	}
 
 	.marco-icono-grafi {
 		    margin-left: -205px;
 	}
 
-	.icono {
-    margin: 0 75px 10px;
-}
-
     .show-xs{display:block !important}
     .hide-xs{display:none !important}
 }
 
-
 @media screen and (orientation:landscape) {/*Panoramica*/
     @media screen and (max-width: 1024px) {
     }
+
     @media screen and (max-width: 767px) {/*xs*/
 
     }
     @media screen and (max-width: 480px) {
     }
 }
+
 @media screen and (orientation:portrait) {/*parado*/
     @media screen and (max-width: 640px) {
     }
     @media screen and (max-width: 480px) {
     }
 }
+
 @media screen and (max-width: 200px) {
 }
+
 @media screen and (min-width: 1200px) {
-
-} 
-
-
+}
